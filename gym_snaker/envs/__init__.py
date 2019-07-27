@@ -1,2 +1,10 @@
-from gym_snaker.envs.snaker_env import SnakerEnv
-from gym_snaker.envs.snaker_extrahard_env import SnakerExtraHardEnv
+from gym.envs.registration import register
+
+register(
+    id='foo-v0',
+    entry_point='gym_foo.envs:FooEnv',
+)
+register(
+    id='foo-extrahard-v0',
+    entry_point='gym_foo.envs:FooExtraHardEnv',
+)
